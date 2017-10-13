@@ -2,6 +2,15 @@
 <html>
 <head>
 	<script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
 	var text1 = "안녕하세요.";
 	var text2 = '안녕하세요.';
 
@@ -23,7 +32,7 @@ var text6 = '친구가 말했다 \'수업 땡땡이 치자. F는 우리의 몫.\'';
 	console.log(text5);
 	console.log(text6);
 
-	</script>
+	}}</script>
 </head>
 <body>
 </body>
