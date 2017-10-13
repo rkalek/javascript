@@ -2,6 +2,15 @@
 <html>
 <head>
     <script type="text/javascript">
+console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
     var a = 10;
     var b = 10;
     var c = "10";
@@ -15,8 +24,34 @@
     console.log(a == b && typeof (a) == typeof (b));
     console.log(a == c && typeof (a) == typeof (c));
 
-    </script>
+    }}</script>
 </head>
 <body>
+  <div>
+        <textarea cols = "100" rows="40">
+       console.log = function(msg) {
+        var ul = document.getElementById("log");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(msg));
+        ul.appendChild(li);
+    }
+
+    window.onload = function() {
+        document.getElementById("run").onclick = function() {
+    var a = "현재 시간은 ";
+    var b = 1;
+    var c = 2;
+    var d = "시입니다.";
+    var sum = a + b + c + d;
+    console.log(sum);
+    }}
+        </textarea>
+    </div>
+    <div>
+        <input type="button" id="run" value="실행"/>
+    </div>
+    <div>
+        <ul id="log" style="list-style-type:circle"></ul>
+    </div>
 </body>
 </html>
